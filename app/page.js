@@ -1,95 +1,28 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import React from 'react';
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+const videos = [
+  {
+    title: 'Spidey Swings',
+    embedCode: `<div style="padding:100% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/983047393?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Spidey Swings @kval.aep"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>`,
+  },
+  {
+    title: 'Spidey Swings (Dropbox)',
+    embedCode: `<video width="100%" height="auto" controls><source src="https://dl.dropboxusercontent.com/scl/fi/w84eiqw0ly1uifij6lmbt/0.1-spidy.mp4?rlkey=1dq0wyk0h7e8y0iac4fw51wsw&st=b5t5pexn" type="video/mp4">Your browser does not support the video tag.</video>`,
+  },
+];
+
+const VideosPage = () => (
+  <div>
+    <h1>My Reel Videos</h1>
+    <div>
+      {videos.map((video, index) => (
+        <div key={index}>
+          <h2>{video.title}</h2>
+          <div dangerouslySetInnerHTML={{ __html: video.embedCode }} className='vid'/>
         </div>
-      </div>
+      ))}
+    </div>
+  </div>
+);
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
-}
+export default VideosPage;
