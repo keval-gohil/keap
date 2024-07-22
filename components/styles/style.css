@@ -1,0 +1,9 @@
+.ov-vid{
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: inset 0 0 6rem 4rem #14131a;
+    background: rgba(0,0,0,0.4);
+    width: 100%;
+    height: 100%;
+}
