@@ -62,6 +62,10 @@
     .ov-details .ov-header{
       padding: 0 1rem;
   }
+  
+.click-dropdown button {
+  font-size: 1.5rem;
+}
   }
 
 
@@ -74,25 +78,26 @@
     align-items: end;
 }
 	.left-intro .left-det b{
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .left-intro .left-det h1{
-    font-size: 2.7rem;
+    font-size: 2.5rem;
   }
   .left-intro .left-det p{
-    font-size: 0.9rem;
+    font-size: 1rem;
+    width: 90%;
   }
+  .ov-details .ov-header .ov-links {
+    margin-right: 0.8rem;
+}
 }
 
 
 @media (max-width: 500px) {
 	.left-intro .left-det b{
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
   .left-intro .left-det h1{
-    font-size: 2.7rem;
-  }
-  .left-intro .left-det p{
-    font-size: 0.9rem;
+    font-size: 2.4rem;
   }
 }
