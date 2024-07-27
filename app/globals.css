@@ -62,24 +62,14 @@ body {
 		font-size: 55%;
 	}
   }
-  @media (max-width: 400px) {
-	html{
-		font-size: 50%;
-	}
-  }
-  @media (max-width: 360px) {
-	html{
-		font-size: 45%;
-	}
-  }
   @media (max-width: 352px) {
 	html{
-		font-size: 43%;
+		font-size: 47%;
 	}
   }
   @media (max-width: 330px) {
 	html{
-		font-size: 41%;
+		font-size: 43%;
 	}
   }
   @media (max-width: 300px) {

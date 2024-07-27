@@ -67,6 +67,12 @@
 
   
 @media (max-width: 600px) {
+  .ov-details .left-intro {
+    padding-left: 0;
+    height: calc(100% - 9rem);
+    display: flex;
+    align-items: end;
+}
 	.left-intro .left-det b{
     font-size: 1rem;
   }
