@@ -1,6 +1,10 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import '@/components/styles/style.css';
+import '@/components/styles/responsive.css';
+import CatMenu from '@/components/catMenu'
+import CatMenuMob from '@/components/catMenuMob'
+import LeftIntro from '@/components/leftIntro'
 
 const AutoV = () => {
   const [isCached, setIsCached] = useState(false);
@@ -25,8 +29,25 @@ const AutoV = () => {
     };
   }, []);
 
+
+  const icons = ['mingcute--user-4-line', 'mdi--pencil-circle'];
+
+  // State to manage the current icon index
+  const [currentIconIndex, setCurrentIconIndex] = useState(0);
+
+  useEffect(() => {
+    // Function to update the icon index every 2 seconds
+    const interval = setInterval(() => {
+      setCurrentIconIndex((prevIndex) => (prevIndex + 1) % icons.length);
+    }, 4000);
+
+    // Cleanup the interval when the component is unmounted
+    return () => clearInterval(interval);
+  }, [icons.length]);
+
   return (
-    <div style={{ width: '100%', height: 'auto', overflow: 'hidden', position: 'relative' }}>
+    <div className="vid-con" style={{ display:'flex', justifyContent:'end', position: 'relative'}}>
+    <div style={{ height: 'auto', overflow: 'hidden', position: 'relative' }} className='video-wid'>
       <video
         id="video-element"
         style={{ width: '100%', height: 'auto' }}
@@ -35,13 +56,31 @@ const AutoV = () => {
         muted
       >
         <source
-          src="https://dl.dropboxusercontent.com/scl/fi/k04niarn1a6w8usrjb3cm/Spidey-identity.mp4?rlkey=pc1xnf64ln7x3f93ok667mae9&st=p2v86p4w&dl=0"
+          src="https://dl.dropboxusercontent.com/scl/fi/xixj6flnx6ydp8mjx3wuk/spidey-3.mp4?rlkey=8qqa7vqs4t4969vxw8qavjkxh&st=8s0t6olp&dl=0"
           type="video/mp4"
         />
         Your browser does not support the video tag.
       </video>
-      <div className="ov-vid">
-        {/* No visible message; only console logging */}
+      <div className="ov-vid"></div>
+      <div className="ov-lay1"></div>
+      <div className="ov-lay2"></div>
+    </div>
+
+      <div className="ov-details">
+        <div className="ov-header">
+          <a href="/"><img src="/keap-logo.png" alt="KEAP" /></a>
+          <div className="ov-links">
+            <a href="/" className='saved'>Saved <i className='iconoir--media-video-list'></i></a>
+            <span className='pc-menu'><CatMenu></CatMenu></span>
+            <span className='profile-menu'><CatMenuMob></CatMenuMob></span>
+            <a href="/" className='request'>Request Now</a>
+            <a href="/" className="username">
+              Unknown <i className={icons[currentIconIndex]}></i>
+           </a>
+          </div>
+        </div>
+
+        <div className="left-intro"><LeftIntro></LeftIntro></div>
       </div>
     </div>
   );

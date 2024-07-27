@@ -76,7 +76,7 @@ const VideosPage = () => {
           <div key={index}>
             <h2>{video.title}</h2>
             <video
-              width="500px"
+              width="200px"
               height="auto"
               controls
               preload="auto"

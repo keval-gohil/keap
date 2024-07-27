@@ -1,0 +1,92 @@
+
+
+@media (max-width: 1250px) {
+	.ov-details .ov-header{
+        height: 5.5rem;
+    }
+  }
+
+
+  @media (max-width: 1000px) {
+	.vid-con .video-wid{
+        width: 100%;
+      }
+      .profile-menu{
+        display: block !important;
+      }
+      
+      .saved{
+        display: none !important;
+      }
+      .username{
+        display: none !important;
+      }
+      .request{
+        display: none !important;
+      }
+      .pc-menu{
+        display: none !important;
+      }
+
+      .ov-details .ov-header .ov-links{
+        font-size: 1.3rem;
+    }
+      .ov-lay1{
+        display: none;
+    }
+    .ov-details .left-intro{
+        padding-left: 0;
+        height: calc(100% - 9rem);
+        display: flex;
+        align-items: center;
+      }
+      .left-intro .left-det{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .ov-vid{
+        background: rgba(0,0,0,0.5);
+    }
+      .left-intro .left-det h1{
+        text-align: center;
+      }
+      .br2{
+        display: none;
+      }
+  }
+
+  @media (max-width: 800px) {
+    .ov-details .ov-header{
+      padding: 0 1rem;
+  }
+  }
+
+
+  
+@media (max-width: 600px) {
+	.left-intro .left-det b{
+    font-size: 1rem;
+  }
+  .left-intro .left-det h1{
+    font-size: 2.7rem;
+  }
+  .left-intro .left-det p{
+    font-size: 0.9rem;
+  }
+}
+
+
+@media (max-width: 500px) {
+	.left-intro .left-det b{
+    font-size: 1rem;
+  }
+  .left-intro .left-det h1{
+    font-size: 2.7rem;
+  }
+  .left-intro .left-det p{
+    font-size: 0.9rem;
+  }
+}
