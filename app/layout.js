@@ -1,7 +1,11 @@
-import { Rubik } from "next/font/google";
+import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 
-const inter = Rubik({ subsets: ["latin"], display: 'swap', weight: ['300','400', '700'], });
+const inter = Bricolage_Grotesque({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+});
 
 export const metadata = {
   title: "Create Next App",
